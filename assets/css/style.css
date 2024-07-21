@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, main {
     width: 100vw;
     height: 100svh;
     background-color: #000;
     overflow: hidden;
+    user-select: none;
 }
 
 a, p {
@@ -80,8 +81,8 @@ img {
 
 .timeline {
     position: absolute;
+    right: -2px;
     top: 50%;
-    right: 0;
     transform: translateY(-50%);
     width: 105%;
     z-index: 2;
