@@ -10,6 +10,7 @@ html, body, main {
     background-color: #000;
     overflow: hidden;
     user-select: none;
+    cursor: pointer;
 }
 
 a, p {

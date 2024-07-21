@@ -105,8 +105,7 @@
         let lastFlexGrow = counters[counters.length - 1].style.flexGrow;
 
         const lastCounter = document.querySelector(".timeline .last");
-        console.log(lastCounter);
-        
+
         if(lastCounter && lastCounter.textContent === "7pm") {      
             appendNewCounters()
         }
@@ -158,19 +157,21 @@
 
     onMounted(() => {
 
-        setTimeout(() => {
-            const slides = document.querySelectorAll('.slide')
+        const slides = document.querySelectorAll('.slide')
 
-            slides.forEach((slide, index) => {
-                if(index > 0) {
-                    gsap.set(slide, {clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"})
-                }
-            })
+        slides.forEach((slide, index) => {
+            if(index > 0) {
+                gsap.set(slide, {clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)"})
+            }
+        })
 
-            initializeFlexValues()
+        initializeFlexValues()
 
-            document.addEventListener("click", handleSlider)
-        }, 500);
+        document.addEventListener("click", handleSlider)
+
+        setInterval(() => {
+            handleSlider()
+        }, 8000);
 
     })
 
@@ -181,7 +182,7 @@
         
         <nav>
             <a href="#">Mamalizz</a>
-            <a href="#">Developing his future</a>
+            <a href="#">Developing the future</a>
         </nav>
 
         <footer>
